@@ -15,4 +15,15 @@ const printHelp = () => {
     )
 };
 
-export { printError, printSuccess, printHelp};
+const printWeather = (response) => {
+    console.log(
+`Weather in city ${response.name}
+Temp : ${response.main.temp}
+Feel like: ${response.main.feels_like}
+Speed wind: ${response.wind.speed}   
+Humidity: ${response.main.humidity}   
+`
+        )
+}
+
+export { printError, printSuccess, printHelp, printWeather};
